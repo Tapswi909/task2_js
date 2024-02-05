@@ -1,0 +1,796 @@
+<style>
+  /* Common Css  */
+  .test-list-container nav {
+    border: 1.5px solid rgba(213, 213, 213, 0.84);
+    background: #fff;
+    box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+  }
+
+  .view-report-page .back-btn h2 {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .test-list-container .has-search .form-control {
+    padding-left: 2.375rem;
+    border-radius: 6px;
+    border: 1px solid #cccedd;
+  }
+
+  .test-list-container .test-card {
+    margin-bottom: 1rem;
+  }
+
+  .test-list-container .test-card img {
+    width: 25px;
+    margin-right: 10px;
+  }
+
+  .test-list-container h2 {
+    font-size: 1.3rem;
+    color: #000;
+  }
+
+  .test-list-container img {
+    vertical-align: middle;
+    color: #000;
+  }
+
+  .test-list-container h4 {
+    font-size: 1.3rem;
+    color: #000;
+  }
+
+  .test-list-container h5 {
+    font-size: 1.2rem;
+    color: #000;
+  }
+
+  .test-list-container .test-card li {
+    font-size: 1rem;
+  }
+
+  .test-list-container .test-card p {
+    font-size: .9rem;
+  }
+
+  .test-list-container .layout-button button img {
+    width: 1.3rem;
+  }
+
+  .test-list-container .layout-button button:hover,
+  .test-list-container .layout-button button.active {
+    background-color: #E8F1FF;
+  }
+
+
+  .test-list-container .dropdown .dropdown-toggle {
+    background-color: #ffffff;
+    color: #6e759f;
+    border-radius: 6px;
+    border: 1px solid #cccedd;
+  }
+
+  .test-list-container .has-search .fa {
+    color: #4c63fe;
+  }
+
+  .test-list-container .test-list-container .nav-link {
+    color: #6e759f;
+    text-align: center;
+  }
+
+  .test-list-container .nav-tabs .nav-link {
+    border: none !important;
+    padding-left: 0;
+    padding-right: 0 !important;
+  }
+
+  .test-list-container .nav-link:hover {
+    cursor: pointer;
+  }
+
+
+  .test-list-container .layout-button button {
+    background-color: transparent;
+    border: none;
+  }
+
+  .test-list-container .layout-button button :hover {
+    background-color: #293952;
+  }
+
+  .test-list-container .badge {
+    background-color: #6e759fbf;
+    color: #fff;
+    padding-top: 2px;
+    padding: 2px 5px;
+  }
+
+  .test-list-container .dropdown-toggle::after {
+    margin-left: 11.255em;
+  }
+
+  .test-list-container .nav-link {
+    color: #6E759F;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-right: 2rem;
+    padding-bottom: 10px;
+  }
+
+
+  .test-list-container .nav-link:hover,
+  .test-list-container .nav-link.active {
+    color: #4c63fe;
+    border-bottom: 2px solid #4c63fe !important;
+    text-align: center;
+  }
+  .test-list-container .nav-link span.active{
+    background-color: #4c63fe;
+  }
+
+  .test-list-container .test-card {
+    border-radius: 6px;
+    background: var(--color-states-common-white, #FFF);
+    border-radius: 6px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    padding-top: 1rem;
+    width: 18%;
+    padding: mrem;
+    margin: 1rem;
+  }
+
+  .test-list-container #test-list-output {
+    overflow: auto;
+    max-height: 70vh;
+  }
+
+  .test-list-container li {
+    color: #6E759F;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    list-style: none;
+    padding-bottom: 10px;
+  }
+
+  .test-list-container .test-grid-coloumn button {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 70%;
+    font-size: 20px;
+  }
+
+  .test-list-container .test-grid-coloumn {
+    overflow-y: auto;
+  }
+
+  .test-list-container .inactive-button {
+    border: none;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .test-list-container .active-button {
+    background-color: #3f75bb;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .test-list-container .test-grid-coloumn li img {
+    margin-top: -4px;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+  }
+
+  .test-list-container .img-color {
+    color: #4c63fe;
+  }
+
+  .test-list-container .test-main-container {
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .test-list-container .test-main-container .test-section {
+    width: 100%;
+    text-align: center;
+    border: none;
+  }
+
+  .test-list-container .test-main-container .test-section .test-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10%;
+  }
+
+  .test-list-container .test-main-container .test-section .test-heading-section h1 {
+    color: #000;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+
+  .test-list-container .test-main-container .test-section .test-heading-section h4 {
+    color: #6C6C6C;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 4%;
+  }
+
+
+  /* list */
+
+
+  .test-list-container .test-list-view .inactive-button-list {
+    font-size: 18px;
+    color: #ffff;
+    font-weight: 500;
+    margin-right: 100px;
+    float: inline-end;
+  }
+
+  /* @media queries */
+  @media screen and (max-width: 1440px) {
+    .test-list-container h4 {
+      font-size: 1.2rem;
+      color: #000;
+    }
+
+    .test-list-container .test-card {
+      width: 22%;
+      margin: 1rem;
+    }
+
+    .test-list-container .nav-link {
+      margin-right: 0rem;
+    }
+
+    .test-list-container .test-card li {
+      font-size: .9rem;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .test-list-container li {
+      margin-right: 0rem;
+    }
+
+    .test-list-container .test-card li {
+      font-size: .8rem;
+    }
+
+    .test-list-container .test-card {
+    margin: .7rem;
+    width: 30%;
+}
+
+    .test-list-container a.nav-link {
+      font-size: 14px;
+    }
+
+    .test-list-container .dropdown .dropdown-toggle::after {
+      margin-left: 0.3em;
+    }
+
+    .test-list-container li {
+      font-size: 12px;
+    }
+
+    .test-list-container .test-grid-coloumn h4 {
+      font-size: 14px;
+    }
+
+    .test-list-container .test-card {
+      margin-bottom: 15px;
+    }
+
+    .test-list-container .test-grid-coloumn button {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      width: 50%;
+      font-size: 14px;
+    }
+
+    .test-list-container .test-list-view #common-date-time {
+      font-size: 10px !important;
+    }
+
+    .test-list-container .nav-item {
+      margin: 0;
+    }
+
+    .test-list-container h5 {
+      font-size: 1rem;
+      color: #000;
+    }
+
+    .test-list-container .test-list-view .inactive-button-list {
+      font-size: 13px;
+      margin-left: 10px;
+    }
+
+    .test-list-container .test-list-view #heading {
+      font-size: 20px;
+    }
+
+    .test-list-container .grid-view-mobile-template {
+      display: none;
+    }
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .test-list-container .test-card {
+      width: 44%;
+      margin: .7rem;
+    }
+
+    .test-list-container h5 {
+      font-size: .8rem;
+    }
+
+    .test-list-container .test-card img {
+      width: 20px;
+      margin-right: 5px;
+    }
+
+    .test-list-container h5 {
+      font-size: .7rem;
+    }
+
+    .test-list-container .test-list-view .inactive-button-list {
+      font-size: 10px;
+      margin-left: 4px;
+    }
+  }
+
+  @media screen and (max-width: 708px) {
+
+    .test-list-container .layout-button {
+      width: 0;
+
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .test-list-container .grid-view-mobile-template {
+      display: none;
+    }
+
+  }
+  .grid-view-mobile-template-content{
+   overflow: scroll;
+    width: 100%;
+  }
+
+  @media only screen and (max-width:600px) {
+    .test-list-view {
+      display: none;
+    }
+
+    .test-list-container .grid-view-mobile-template {
+      display: block;
+    }
+    
+
+    .test-list-container .test-main-container .test-section .test-image-section img {
+      margin-top: 10%;
+      width: 50%;
+    }
+
+    .test-list-container .test-main-container .test-section .test-heading-section h1 {
+      font-size: 1.3rem;
+    }
+
+    .test-list-container .test-main-container .test-section .test-heading-section h4 {
+      font-size: 1rem;
+    }
+
+    /* .test-list-container .test-list-view {
+      display: none;
+    } */
+
+    .test-list-container nav {
+      display: none;
+    }
+
+    .test-list-container .grid-view-mobile-template .dropdown-item {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #000;
+      margin: .5rem;
+      width: 137px;
+      left: -67px;
+    }
+
+    .test-list-container .grid-view-mobile-template .dropdown-menu {
+      left: -38px !important;
+    }
+
+    .test-list-container .grid-view-mobile-template .dropdown-menu {
+      border-radius: 5px !important;
+      border-bottom: 1px solid rgba(213, 213, 213, 0.84) !important;
+      box-shadow: 0px 2px 3px 0px #EFEFEF inset, 0px 4px 5px 0px #EFEFEF !important;
+    }
+
+    .test-list-container .test-card li {
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .test-list-container .grid-view-mobile-template img {
+      width: 25px;
+    }
+
+    .test-list-container .inactive-button {
+      padding: 7px 69px;
+      font-size: 16px;
+    }
+
+    .test-list-container .test-grid-coloumn {
+      display: none;
+    }
+
+    .test-list-container .gird-view-dropdown-button {
+      height: 65px;
+      flex-shrink: 0;
+      border-radius: 6px;
+      background: var(--color-states-common-white, #FFF);
+      /* Gray Goose/Card Shadow */
+      box-shadow: 0px 2px 2px 0px rgba(159, 162, 191, 0.32), 0px 9px 16px 0px rgba(159, 162, 191, 0.18);
+    }
+
+    .test-list-container .filter-list .dropdown .btn-secondary:hover {
+      background-color: transparent;
+      border: none;
+    }
+
+    .test-list-container .filter-list .filter-button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+
+
+
+    .test-list-container .grid-collpase-button {
+    text-align: left;
+    color: #000;
+    font-size: 16px;
+    padding: .5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    /* height: 65px; */
+}
+
+    .test-list-container .grid-collpase-button:focus {
+      outline: none !important;
+      border: none !important;
+
+    }
+
+
+    .test-list-container .grid-view-mobile-template .dropdown-item:hover,
+    .test-list-container .grid-view-mobile-template .dropdown-item.active {
+      background-color: transparent;
+      color: #4c63fe;
+      border-bottom: 2px solid #4c63fe;
+    }
+
+    .test-list-container .test-card {
+      width: 100%;
+      margin: 0rem;
+    }
+  }
+</style>
+
+<div class="container-fluid test-list-container">
+  <div class="row">
+    <div class="col-12">
+      <nav class="row pro-nav navbar-expand p-2">
+        <ul class="navbar-nav justify-content-start col-md-9">
+          <li class="nav-item  p-1">
+            <a class=" p-2 nav-link" ng-click="setFilter('Active')"
+              ng-class="{ 'active': selectedFilter === 'Active' }">
+              Active
+              <span class="badge ml-2 pt-1"
+                ng-class="{ 'active': selectedFilter === 'Active' }"
+                ng-bind="calculateBadgeCount('Active')">
+              </span>
+            </a>
+          </li>
+          <li class="nav-item  p-1">
+            <a class="p-2 nav-link" ng-click="setFilter('Upcoming')"
+              ng-class="{ 'active': selectedFilter === 'Upcoming' }">
+              Upcoming
+              <span class="badge ml-2 pt-1"
+                ng-class="{ 'active': selectedFilter === 'Upcoming' }"
+                ng-bind="calculateBadgeCount('Upcoming')">
+              </span>
+            </a>
+          </li>
+          <li class="nav-item  p-1">
+            <a class="p-2 nav-link" ng-click="setFilter('Complete')"
+              ng-class="{'active': selectedFilter === 'Complete' }">
+              Complete
+              <span class="badge ml-2 pt-1"
+                ng-class="{ 'active': selectedFilter === 'Complete' }"
+                ng-bind="calculateBadgeCount('Complete')">
+              </span>
+            </a>
+          </li>
+          <li class="nav-item  p-1">
+            <a class="p-2 nav-link" ng-click="setFilter('Missed')"
+              ng-class="{'active': selectedFilter === 'Missed' }">
+              Missed
+              <span class="badge ml-2 pt-1"
+                ng-class="{ 'active': selectedFilter === 'Missed' }"
+                ng-bind="calculateBadgeCount('Missed')">
+              </span>
+            </a>
+          </li>
+          <li class="nav-item  p-1">
+            <a class="p-2 nav-link" ng-click="setFilter('Inactive')"
+              ng-class="{'active': selectedFilter === 'Inactive' }">Inactive
+              <span class="badge ml-2 pt-1"
+                ng-class="{ 'active': selectedFilter === 'Inactive' }"
+                ng-bind="calculateBadgeCount('Inactive')">
+              </span>
+            </a>
+          </li>
+        </ul>
+        <div class="layout-button col-md-3  d-flex justify-content-end m-2">
+          <button class="grid-button mr-2" ng-class="{ active : isGridLayout == true }" id="change-grid-layout"
+            ng-click="isGridLayout = true">
+            <img ng-src="{{commonData.STATIC_FILE_PATH}}/images/svg-icons/grid.svg" alt="" />
+          </button>
+          <button class="menu-button" ng-class="{ active : isGridLayout == false }" id="change-list-layout"
+            ng-click="isGridLayout = false">
+            <img ng-src="{{commonData.STATIC_FILE_PATH}}/images/svg-icons/dropdown.svg" alt="" />
+          </button>
+        </div>
+      </nav>
+
+      
+    </div>
+  </div>
+  <div class="row grid-view-mobile-template">
+    <div class="row">
+      <div class="col-10">
+        <h2>{{selectedFilter}}</h2>
+      </div>
+      <div class="dropdown filter-list col-2 ">
+        <button class=" filter-button p-1" type="button" data-toggle="dropdown" aria-expanded="false">
+          <img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/filter_list.png" alt="Filter List">
+        </button>
+        <div class="dropdown-menu filter-list-menue">
+          <a class="dropdown-item" ng-click="setFilter('Active')"
+            ng-class="{ 'active': selectedFilter === 'Active' }">
+            Active
+            <span class="badge ml-2" 
+              ng-bind="calculateStartResumeBadgeCount('Active Test')">
+            </span>
+          </a>
+          <a class="dropdown-item" ng-click="setFilter('Upcoming')"
+            ng-class="{ 'active': selectedFilter === 'Upcoming' }">
+            Upcoming
+            <span class="badge ml-2"
+              ng-bind="calculateUpcomingBadgeCount()">
+            </span>
+          </a>
+          <a class="dropdown-item" ng-click="setFilter('Complete')"
+            ng-class="{'active': selectedFilter === 'Complete' }">
+            Complete
+            <span class="badge ml-2" 
+              ng-bind="calculateBadgeCount('Complete')">
+            </span>
+          </a>
+          <a class="dropdown-item" ng-click="setFilter('Missed')"
+            ng-class="{'active': selectedFilter === 'Missed' }">
+            Missed
+            <span class="badge ml-2" 
+              ng-bind="calculateBadgeCount('Missed')">
+            </span>
+          </a>
+          <a class="dropdown-item" ng-click="setFilter('Inactive')"
+            ng-class="{'active': selectedFilter === 'Inactive' }">
+            Inactive
+            <span class="badge ml-2" 
+              ng-bind="calculateBadgeCount('Inactive')">
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="grid-view-mobile-template-content">
+
+    <div ng-repeat-start="x in testData" style="display: none;"></div>
+    <div id="accordion">
+      <div class="card grid-mobile-card mt-3" ng-if="x.buttonStatusMob==selectedFilter">
+        <div class="test-card p-0" id="heading{{$index}}">
+          <button class="btn col-12 grid-collpase-button" data-toggle="collapse" data-target="#collapse{{$index}}"
+            aria-expanded="false" aria-controls="collapse{{$index}}">
+            <div class="row">
+              <div class="col-10 col-md-11">{{x.test_name}} </div> <i class="fa fa-caret-down col-1"></i>
+            </div>
+          </button>
+        </div>
+        <div id="collapse{{$index}}" class="collapse" aria-labelledby="heading{{$index}}" data-parent="#accordion">
+          <div class="card test-card pt-1 pl-1 pb-4 pr-1 ">
+            <!-- <h4 class="mt-3 ml-4 "><strong>{{x.test_name}}</strong></h4> -->
+            <ul class="p-0 mt-3 m-auto">
+              <li>
+                <span><img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/Calender icon.svg" class="img-color" alt="Start Date" /></span>
+                Start Date: {{(x.start_date_time | dateConversion).split(" ")[0]}}
+              </li>
+              <li>
+                <span><img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/Calender icon.svg " alt="End Date" /></span>
+                End Date : {{(x.end_date_time | dateConversion).split(" ")[0]}}
+              </li>
+              <li>
+                <span><img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/Clock icon.svg" alt="" /></span> Time :
+                {{(x.start_date_time | dateConversion).split(" ")[1]}} to {{(x.end_date_time |
+                dateConversion).split(" ")[1]}}
+              </li>
+              <li>
+                <span><img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/Clock icon.svg" alt="Duration" /></span>
+                Duration: {{x.duration}} minutes
+              </li>
+            </ul>
+            <button type="submit" class="btn btn-sm active-button m-auto mt-4"
+              ng-click="startTest(x.test_id, x.template)"
+              ng-if="x.buttonStatus != 'Un Published' && x.buttonStatus != 'Inactive'"
+              ng-bind="x.buttonStatus"></button>
+            <button type="submit" class="btn btn-secondary btn-sm Inactive-button m-auto mt-4"
+              ng-if="x.buttonStatus == 'Un Published' || x.buttonStatus == 'Inactive'"
+              ng-bind="x.buttonStatus"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div ng-repeat-end style="display: none;"></div>
+  </div>
+</div>
+
+  <div class="row test-grid-coloumn " ng-show="isGridLayout">
+    <div ng-repeat-start="x in testData" style="display: none;"></div>
+    <div class="test-card" ng-if="filterTest(x.buttonStatusMob)">
+      <div class="card pl-1 pb-4 pr-1">
+        <ul class="p-0 mt-3 m-auto mb-3">
+          <h4 class=" "><strong>{{x.test_name}}</strong></h4>
+          <li>
+            <span><img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/Calender icon.svg" class="img-color" alt="" /></span>
+            Start Date: {{(x.start_date_time | dateConversion).split(" ")[0]}}
+          </li>
+          <li>
+            <span><img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/Calender icon.svg " alt="" /></span>
+            End Date : {{(x.end_date_time | dateConversion).split(" ")[0]}}
+          </li>
+
+          <li>
+            <span><img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/Clock icon.svg" alt="" /></span> Time :
+            {{(x.start_date_time | dateConversion).split(" ")[1]}} to {{(x.end_date_time |
+            dateConversion).split(" ")[1]}}
+          </li>
+
+          <li>
+            <span><img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/Clock icon.svg" alt="" /></span>
+            Duration: {{x.duration}} minutes
+          </li>
+        </ul>
+        <button type="submit" class="btn btn-sm active-button m-auto mt-4" ng-click="startTest(x.test_id, x.template)"
+          ng-if="x.buttonStatus != 'Un Published' && x.buttonStatus != 'Inactive'" ng-bind="x.buttonStatus"></button>
+        <button type="submit" class="btn btn-secondary btn-sm Inactive-button m-auto mt-4"
+          ng-if="x.buttonStatus == 'Un Published' || x.buttonStatus == 'Inactive'" ng-bind="x.buttonStatus"></button>
+      </div>
+    </div>
+    <div ng-repeat-end style="display: none;"></div>
+  </div>
+  <div class="test-list-view" ng-hide="isGridLayout">
+    <div class="col-12 p-0 mb-4">
+      <div ng-repeat-start="x in testData" style="display: none;"></div>
+      <div ng-if="x.buttonStatusMob==selectedFilter">
+        <div class="">
+          <div class="row  pl-2 test-card w-100 m-0 mb-4">
+            <div class="col-md-12  mb-2">
+              <h4 id="heading"><strong>{{x.test_name}}</strong></h4>
+            </div>
+            <div class=" col-md-9 d-flex justify-content-between list-view">
+              <div class=" mb-3 d-flex">
+                <div class="p-1"><img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/Calender icon.svg " alt="" /></div>
+                <div>
+                  <h5><strong>Start Date</strong></h5>
+                  <p id="common-date-time">{{(x.start_date_time | dateConversion).split(" ")[0]}}</p>
+                </div>
+              </div>
+              <div class=" d-flex p-0">
+                <div class="p-1"><img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/Calender icon.svg " alt="" /></div>
+                <div>
+                  <h5><strong>End Date</strong></h5>
+                  <div id="common-date-time">{{(x.end_date_time | dateConversion).split(" ")[0]}}</div>
+                </div>
+              </div>
+              <div class=" d-flex p-0">
+                <div class="p-1"><img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/Clock icon.svg" alt="" /></div>
+
+                <div>
+                  <h5><strong>Time</strong></h5>
+                  <div id="common-date-time"> {{(x.start_date_time | dateConversion).split(" ")[1]}} to
+                    {{(x.end_date_time
+                    |
+                    dateConversion).split(" ")[1]}}</div>
+                </div>
+              </div>
+              <div class=" d-flex p-0">
+                <div class="p-1">
+                  <img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/Clock icon.svg" alt="" />
+                </div>
+                <div>
+                  <h5><strong>Duration</strong></h5>
+                  <div id="common-date-time">{{x.duration}} min</div>
+                </div>
+              </div>
+            </div>
+            <div class=" col-md-3">
+              <button type="submit" class="btn mt-1 mb-1 w-50 active-button-list "
+                ng-click="startTest(x.test_id, x.template)"
+                ng-if="x.buttonStatus != 'Un Published' && x.buttonStatus != 'Inactive'"
+                ng-bind="x.buttonStatus"></button>
+              <button type="submit" class="btn btn-secondary mt-1 mb-1 w-90 inactive-button-list "
+                ng-if="x.buttonStatus == 'Un Published' || x.buttonStatus == 'Inactive'"
+                ng-bind="x.buttonStatus"></button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div ng-repeat-end style="display: none;"></div>
+
+    </div>
+  </div>
+  <div class="test-main-container" ng-if="calculateBadgeCount(selectedFilter)==0">
+    <div class="row">
+      <div class=" col-md-12 col-lg-12 p-0">
+        <div class=" test-section p-2">
+          <div class="row">
+            <div class=" col-md-12 col-lg-12">
+              <div class=" test-image-section ">
+                <img ng-src="{{commonData.STATIC_FILE_PATH}}/images/testList/no_test.jpg" alt="no test found">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-lg-12 p-0">
+              <div class=" test-heading-section mt-4">
+                <h1 class="text-center mb-2">No {{selectedFilter}} Tests found </h1>
+                <h4 class="text-center w-75 m-auto">No test found that match the filter criteria. Please apply different
+                  filter and try again.
+                </h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

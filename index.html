@@ -1,33 +1,352 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flip Card</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <div class="level">
-
-    <h2>Easy Level</h2>
-    <!-- <h2>Easy Level</h2>
-        <h2>Easy Level</h2> -->
-
-  </div>
-  <div class="wrapper">
-    <div class="stats-container">
-      <div id="moves-count"></div>
+[15:57] Tapswi Yadav
+<style>
+    .back-btn h2 {
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+ 
+    /* static code */
+    h4 b {
+        display: none;
+    }
+ 
+    .notification-page .notification-content {
+        /* width: 100%; */
+        /* height: 70vh; */
+        padding: 2rem;
+        background-color: #ffff;
+        border-radius: 6px;
+        border: 1px solid #ede2e2;
+        border-radius: 6px;
+        margin: 1rem;
+        /* background: var(--color-states-common-white, #FFF); */
+        box-shadow: 0px 2px 3px 0px rgba(159, 162, 191, 0.32);
+    }
+ 
+    .message {
+        color: #6e759f;
+    }
+ 
+    .notification-date {
+        width: 25%;
+    }
+ 
+    .notification-page .notification-content .notification-card {
+        width: 90%;
+        /* margin: 1rem; */
+        /* padding: .5rem; */
+        width: 94%;
+        border-radius: 6px;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        /* border-radius: 6px; */
+        /* border: 1px solid #D9D9D9; */
+        /* align-items: center; */
+ 
+    }
+ 
+    .nft-content {
+        margin-left: 2rem;
+        width: 75%;
+    }
+ 
+    .notification-page .notification-content .notification-card .nft-title {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+ 
+    .notification-page .notification-content .notification-card .notification-content {
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+ 
+    }
+ 
+    .nft-bell {
+        width: 50px;
+        border-radius: 50%;
+        background-color: #6c6c6c26;
+        height: 35px;
+        width: 35px;
+        padding: 6px 8px;
+        cursor: pointer;
+    }
+ 
+ 
+    .notification-page .fa-solid,
+    .fas {
+        /* width: 27px; */
+        font-size: 23px;
+        /* margin: 6px; */
+    }
+ 
+    /* static code end */
+ 
+ 
+ 
+    /* no product found css  */
+    .no-product-section {
+        width: 100%;
+        box-sizing: border-box;
+    }
+ 
+    .no-product-section {
+        width: 100%;
+        /* height: 35vh; */
+        text-align: center;
+        border: none;
+    }
+ 
+ 
+    .no-product-section img {
+        width: 300px;
+    }
+ 
+    .no-product-section .buy-product-heading-section h1 {
+        color: #000;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+ 
+    .no-product-section .buy-product-heading-section h4 {
+        color: #6c6c6c;
+ 
+        font-size: 0.8rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+ 
+    .no-product-section .buy-product-heading-section h1 {
+        font-size: 1.9rem;
+        margin-top: 2%;
+    }
+ 
+    .no-product-section .buy-product-heading-section h4 {
+        font-size: 1rem;
+    }
+ 
+    .notification-page .productCard {
+        width: 18%;
+        margin: 1rem;
+    }
+ 
+    @media screen and (max-width: 1440px) {
+        .notification-page .productCard {
+            margin: .7rem;
+            width: 23%;
+        }
+ 
+        .no-product-section .buy-product-image-section img {
+            width: 30%;
+        }
+ 
+        .no-product-section .buy-product-heading-section h1 {
+            font-size: 1.7rem;
+        }
+ 
+        .no-product-section .buy-product-heading-section h4 {
+            font-size: 1rem;
+            width: 80%;
+            margin: auto;
+        }
+    }
+ 
+ 
+    @media screen and (max-width: 1025px) {
+ 
+        .notification-page .productCard {
+            width: 30%;
+        }
+ 
+        .no-product-section .buy-product-image-section img {
+            width: 25%;
+        }
+ 
+ 
+ 
+        .no-product-section .buy-product-heading-section h1 {
+            font-size: 1.2rem;
+        }
+ 
+        .no-product-section .buy-product-heading-section h4 {
+            font-size: 0.7rem;
+        }
+    }
+ 
+    @media screen and (max-width: 769px) {
+ 
+        .notification-page .dummyproduct h1 {
+            font-size: 1rem;
+        }
+ 
+        .notification-page .productCard {
+            width: 228px;
+        }
+ 
+        .no-product-section .buy-product-image-section img {
+            width: 30%;
+        }
+ 
+        .no-product-section .buy-product-heading-section h1 {
+            font-size: 1.3rem;
+        }
+ 
+        .no-product-section .buy-product-heading-section h4 {
+            font-size: 0.8rem;
+            width: 80% !important;
+            margin: auto;
+        }
+ 
+        .notification-page .dummyproduct h5 {
+            font-size: .9rem;
+        }
+ 
+    }
+ 
+    @media screen and (max-width: 426px) {
+        .notification-page .productCard {
+            width: 82%;
+            margin: 1rem 2rem;
+        }
+ 
+        .no-product-section .buy-product-image-section img {
+            width: 45%;
+        }
+ 
+        .no-product-section .buy-product-heading-section h1 {
+            font-size: 1.3rem;
+        }
+ 
+        .no-product-section {
+            margin-top: 10%;
+        }
+ 
+        .no-product-section .buy-product-heading-section h4 {
+            font-size: 0.9rem;
+            width: 90% !important;
+            margin: auto;
+        }
+    }
+ 
+    @media screen and (max-width: 375px) {
+        .no-product-section .buy-product-image-section img {
+            width: 50%;
+        }
+ 
+        .no-product-section .buy-product-heading-section h1 {
+            font-size: 1.2rem;
+        }
+ 
+        .notification-page .productCard {
+            width: 93%;
+            margin: 10px;
+        }
+ 
+ 
+        .no-product-section .buy-product-heading-section h4 {
+            font-size: 0.8rem;
+            width: 100% !important;
+        }
+    }
+ 
+    @media screen and (max-width: 321px) {
+        .no-product-section .buy-product-heading-section h4 {
+            font-size: 0.7rem;
+            width: 100% !important;
+        }
+    }
+</style>
+<div class="notification-page">
+    <div class="mobile-back-btn">
+        <div class="back-btn d-flex p-0 mb-3">
+            <!-- <a  ng-href="product" target="_parent"> -->
+            <a ng-href="#" target="_parent" class="m-1">
+                <img ng-src="{{commonData.STATIC_FILE_PATH}}/images/svg-icons/Back-button.svg" alt="Back">
+            </a>
+            <h2 class=" m-0">Notification</h2>
+        </div>
     </div>
-    <div class="game-container"></div>
-    <button id="stop" class="hide">Stop Game</button>
-  </div>
-  <div class="controls-container">
-    <p id="result"></p>
-    <button id="start">Start Game</button>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
-
+    <!-- static code -->
+    <div class="notification-content">
+        <div ng-if="notificationDetail.length > 0" ng-repeat="x in notificationDetail">
+            <div class="" ng-click="notificationToggler($index)" id="button_{{$index}}">
+                
+                <div class="unread notification-card">
+                    <div class="nft-bell text-success" ng-show="x.view != '1'">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="nft-content" ng-show="x.view != '1'">
+                        <h2 class="nft-title">
+                            {{x.heading}}
+                        </h2>
+                        <div>
+                            <p ng-bind-html="x.message" class="message w-75">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ml-auto notification-date" ng-show="x.view != '1'">
+                        <img class="p-1" style="width: 25px;"
+                            ng-src="{{commonData.STATIC_FILE_PATH}}/images/svg-icons/calendar_today.svg"
+                            alt="Calendar Icon">
+ 
+                        <span ng-bind-html="x.time" class="text-muted "></span>
+                    </div>
+                </div>
+                <div class="read notification-card">
+                    <div class="nft-bell text-white" ng-show="x.view == '1'">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="nft-content" ng-show="x.view == '1'">
+                        <h2 class="nft-title text-muted">
+                            {{x.heading}}
+                        </h2>
+                        <div>
+                            <p ng-bind-html="x.message" class="message w-75">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ml-auto notification-date" ng-show="x.view == '1'">
+                        <img class="p-1" style="width: 25px;"
+                            ng-src="{{commonData.STATIC_FILE_PATH}}/images/svg-icons/calendar_today.svg"
+                            alt="Calendar Icon">
+ 
+                        <span ng-bind-html="x.time" class="text-muted "></span>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+ 
+ 
+    <div class="no-product-section p-2 " ng-if="notificationDetail.length <= 0">
+        <!-- <div class="row"> -->
+        <div class="col-12">
+            <div class="buy-product-image-section">
+                <img ng-src="{{commonData.STATIC_FILE_PATH}}/images/no-notification.jpg" alt="no package found" />
+            </div>
+        </div>
+        <!-- </div> -->
+        <!-- <div class="row"> -->
+        <div class="col-12 p-0">
+            <div class="buy-product-heading-section mt-4">
+                <h1 class="text-center mb-2">No Notification found</h1>
+                <!-- <h4 class="text-center w-75 m-auto">
+                No packages were found in {{currentModule}}. Please choose a
+                different filter and attempt again.
+              </h4> -->
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+</div>
